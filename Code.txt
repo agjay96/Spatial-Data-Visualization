@@ -1,0 +1,17 @@
+#define _USE_MATH_DEFINES
+#include <cmath>
+#include <iostream>
+int main() { 
+  double R=8, r=1, a=4, t;
+  double x, y; 
+  for(t=0; t<= M_PI*16; t+=0.01){
+      x = (R+r)*cos((r/R)*t) - a*cos((1+r/R)*t);
+      y = (R+r)*sin((r/R)*t) - a*sin((1+r/R)*t);
+      x*=0.00572958;
+      y*=0.00572958;
+      x+=34.021205;
+      y+=-118.289391;
+      std::cout<<y<<","<<x<<"\n";
+  }
+  return 0;
+}
